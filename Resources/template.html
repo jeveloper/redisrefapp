@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<style  type="text/css">
+			body {
+				font-family: 'Helvetica Neue', sans-serif;
+			}
+			#bigtitle {
+				font-size: 26px;
+			}
+
+			#metadata {
+				border-left-color: #DFDFDF;
+				border-left-style: solid;
+				border-left-width: 3px;
+				color: #666;
+				display: block;
+				font-size: 12px;
+				font-style: normal;
+				font-variant: normal;
+				font-weight: normal;
+				line-height: 17px;
+				margin-bottom: 0px;
+				margin-left: 0px;
+				margin-right: 0px;
+				margin-top: 17px;
+				max-width: none;
+				overflow-x: visible;
+				overflow-y: visible;
+				padding-bottom: 0px;
+				padding-left: 11px;
+				padding-right: 0px;
+				padding-top: 0px;
+			}
+
+			.desc {
+
+				color: #333;
+				display: block;
+				font-size: 13px;
+				line-height: 19px;
+				margin-bottom: 5px;
+				margin-left: 0px;
+				margin-right: 0px;
+				margin-top: 15px;
+			}
+			#examples {
+				background-color: #FEFEFE;
+				border-bottom-color: #EEE;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				border-bottom-style: solid;
+				border-bottom-width: 1px;
+				border-left-color: #EEE;
+				border-left-style: solid;
+				border-left-width: 1px;
+				border-right-color: #EEE;
+				border-right-style: solid;
+				border-right-width: 1px;
+				border-top-color: #EEE;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				border-top-style: solid;
+				border-top-width: 1px;
+				color: #333;
+				display: inline-block;
+				font-family: Menlo, Monaco, monospace;
+				font-size: 12px;
+				font-style: normal;
+				font-variant: normal;
+				font-weight: normal;
+				line-height: 18px;
+				margin-bottom: 10px;
+				margin-left: 0px;
+				margin-right: 0px;
+				margin-top: 10px;
+				max-width: none;
+				padding-bottom: 15px;
+				padding-left: 15px;
+				padding-right: 15px;
+				padding-top: 15px;
+				white-space: pre;
+			}
+
+			.subheading {
+				color: black;
+				display: block;
+				font-size: 18px;
+				font-weight: 500;
+				height: 22px;
+				line-height: 22px;
+				margin-bottom: 8px;
+				margin-left: 0px;
+				margin-right: 0px;
+				margin-top: 22px;
+				max-width: none;
+			}
+			
+			.sublower {
+				color: black;
+				display: block;
+				font-size: 16px;
+				font-weight: 500;
+				height: 18px;
+				line-height: 18px;
+				
+			}
+
+		</style>
+
+	</head>
+	<body>
+		<div id="bigtitle">
+			APPEND key value
+		</div>
+		<div class="sublower" id="paramsdata"></div>
+		<div id="metadata">
+
+			<strong>Available since:</strong>
+			<div id="sincedata">
+				1.0.0
+			</div>
+			<strong >Time complexity:</strong><div id="timedata"></div>
+		</div>
+
+		<div class="desc" id="descData"></div>
+
+		<p class="subheading">
+			Return Value
+		</p>
+		<div class="desc" id="returnData">
+
+		</div>
+		<p class="subheading">
+			Examples
+		</p>
+		<pre ><code id="examples">
+		</code>
+		</pre>
+		<script>
+			function isBlank(str) {
+				return (!str || /^\s*$/.test(str));
+			}
+
+			function undef(param) {
+				if ( typeof param === 'undefined')
+					return true;
+				else {
+					if (isBlank(param))
+						return true;
+					else
+						return false;
+				}
+			}
+
+
+			Ti.App.addEventListener('ui:showdetails', function(data) {
+
+				document.getElementById('bigtitle').innerHTML = data.name;
+				if (!undef(data.params)) {
+					document.getElementById('paramsdata').innerHTML = data.params;
+				}
+				
+				document.getElementById('sincedata').innerHTML = ' ' + data.sinceversion;
+
+				//WATCH OUT FOR PROPERLY SPELLED IDs or code breaks
+
+				if (!undef(data.timecomplexity)) {
+					document.getElementById('timedata').innerHTML = ' ' + data.timecomplexity;
+
+				}
+
+				document.getElementById('descData').innerHTML = '' + data.longdesc;
+
+				if (!undef(data.returnvalue)) {
+					document.getElementById('returnData').innerHTML = '' + data.returnvalue;
+
+				}
+
+				if (!undef(data.examples)) {
+					document.getElementById('examples').innerHTML = '' + data.examples;
+				}
+
+			});
+		</script>
+	</body>
+</html>

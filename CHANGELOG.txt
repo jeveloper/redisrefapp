@@ -1,0 +1,2 @@
+Added cloud support through ACS , all bookmarks are shared throught for specific user
+All data resides on cloud on mongodb database
