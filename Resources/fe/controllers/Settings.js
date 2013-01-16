@@ -17,7 +17,7 @@ __exports.viewLoaded = function() {
 			if (validateEmail(email)) {
 				Users.createCloudUser({}, function(e) {
 					if (e.success) {
-						log("Success signup");
+						
 
 						//SMART logic
 
@@ -74,7 +74,7 @@ __exports.viewLoaded = function() {
 					username : email
 				}, function(e) {
 					if (e.success) {
-						log("logged in");
+						
 
 						//SET ALL THE VALUES, username????
 						Titanium.App.Properties.setString("username", email);

@@ -33,6 +33,9 @@ __exports = (function() {
 		title : 'Bookmarks'
 	});
 
+
+
+
 	view.mainMenu.add(view.mainMenu.bookmarksButton);
 
 	view.mainMenu.commandsButton = Ti.UI.createButton({
@@ -43,7 +46,9 @@ __exports = (function() {
 		title : 'All Commands'
 	});
 
+
 	view.mainMenu.add(view.mainMenu.commandsButton);
+
 
 	return view;
 })();
