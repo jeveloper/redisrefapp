@@ -8,8 +8,8 @@ var app_version = '1.0';
 var BOOKMARKS_NAME = "bookmarks";
 var BOOKMARKS_IDS = [];
 
-
-Titanium.UI.iPhone.hideStatusBar();
+//TODO if IOS 6 hide status bar
+//Titanium.UI.iPhone.hideStatusBar();
 
 
 Ti.include('/fe/fe.js');

@@ -14,12 +14,13 @@
         <target device="blackberry">false</target>
     </deployment-targets>
     <sdk-version>3.2.0.GA</sdk-version>
-    <id>33W47393BE.com.jeveloper.references.redis</id>
+    <id>com.jeveloper.ref.redis</id>
     <name>RedisReference</name>
     <version>1.0</version>
     <publisher>Serge Bornow</publisher>
     <url>http://www.jeveloper.com</url>
-    <description>Book of Redis</description>
+    <description>Book of Redis
+app id: 33W47393BE.com.jeveloper.references.redis</description>
     <copyright>2012 by Serge Bornow</copyright>
     <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
@@ -32,7 +33,7 @@
     <guid>32f2e335-f8f7-469d-8fc7-2d871681ccbb</guid>
     <property name="ti.ui.defaultunit">system</property>
     <ios>
-        <min-ios-ver>4.3</min-ios-ver>
+        <min-ios-ver>7</min-ios-ver>
     </ios>
     <iphone>
         <orientations device="iphone">

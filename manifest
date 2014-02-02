@@ -2,7 +2,7 @@
 #publisher:Serge Bornow
 #url:http://www.jeveloper.com
 #image:appicon.png
-#appid:33W47393BE.com.jeveloper.references.redis
-#desc:Book of Redis
+#appid:com.jeveloper.ref.redis
+#desc:Book of Redis\napp id: 33W47393BE.com.jeveloper.references.redis
 #type:ipad
 #guid:32f2e335-f8f7-469d-8fc7-2d871681ccbb
